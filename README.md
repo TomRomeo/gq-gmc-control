@@ -1,3 +1,10 @@
+# My changes
+
+For the use with Grafana, I had to change the heartbeat function. In the original Repo, the heartbeat function would print the current data to the screen every second,
+because of how python works, I sadly couldn't easily pipe this output one by one into a file, which is why I edited the method. When using the heartbeat command, the last data
+is now also written into a file called data.txt
+
+The files ./entrUpdateData, ./heartbeat.sh and ./updateGrafData.sh are extremely specific to my use case, so no one else will probably need to use them
 # gq-gmc-control
 
 Control tool  for the GQ GMC  Geiger Counters.  This tool  provides a convenient
