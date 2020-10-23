@@ -476,6 +476,8 @@ def set_heartbeat(enable, cpm_to_usievert=None):
                 if cpm == '':
                     continue
                 value = struct.unpack(">H", cpm)[0] & 0x3fff
+                if value == 0.0000:
+                    continue
 
                 unit_value = (value, 'CPS')
                 if cpm_to_usievert is not None:
