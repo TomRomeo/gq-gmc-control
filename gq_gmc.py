@@ -483,8 +483,12 @@ def set_heartbeat(enable, cpm_to_usievert=None):
 
                 if unit_value[1] == 'uSv/h':
                     print('{:.4f} {:s}'.format(unit_value[0], unit_value[1]))
+                    with open("data.txt", "w") as f:
+                        f.write('{:.4f} {:s}'.format(unit_value[0], unit_value[1]))
                 else:
                     print('{:d} {:s}'.format(unit_value[0], unit_value[1]))
+                    with open("data.txt", "w") as f:
+                        f.write('{:d} {:s}'.format(unit_value[0], unit_value[1]))
 
         except KeyboardInterrupt:
             print("")
